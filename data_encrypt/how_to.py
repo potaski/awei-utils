@@ -7,7 +7,6 @@
 Date    : 2018-12-10 09:19:06
 Author  : hnawei (potaski@qq.com)
 Describe: File Encrypt & Decrypt
-Version : 1.0.0
 -------------------- End --------------------
 """
 
@@ -72,7 +71,7 @@ def example_rsa_pkcs1_5():
     print('method \n', data[:-dsize])
 
 
-def rsa_only(filename):
+def aes_only(filename):
     from Crypto.Cipher import AES
     from Crypto import Random
     from random import choice
