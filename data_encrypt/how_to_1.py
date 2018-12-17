@@ -6,7 +6,9 @@
 -------------------- Copyright --------------------
 Date    : 2018-12-10 09:19:06
 Author  : hnawei (potaski@qq.com)
-Describe: File Encrypt & Decrypt
+Describe: File Encrypt & Decrypt Base On Package: pycrypto
+Link    : https://www.dlitz.net/software/pycrypto/api/2.6/
+Detail  : python3.6.5 & pycrypto2.6
 -------------------- End --------------------
 """
 
@@ -136,6 +138,7 @@ def aes_and_rsa(filename):
     pri_cipher = RSA.importKey(open('zhang-w6.pem').read())
     decrypt_passwd = pri_cipher.decrypt(ciphertext=encrypt_key)
     # print('passwd \n', decrypt_passwd)
+    iv = Random.new().read(16)
     aes_cipher = AES.new(decrypt_passwd, AES.MODE_CFB, iv)
     decrypt_data = aes_cipher.decrypt(encrypt_data[256:])
     # print('decrypt data \n', decrypt_data[16:])
@@ -145,4 +148,4 @@ def aes_and_rsa(filename):
 
 if __name__ == '__main__':
     # example()
-    example_2()
+    aes_and_rsa('data.txt')
