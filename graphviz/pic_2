@@ -1,0 +1,7 @@
+digraph {
+	node [color=lightblue2 shape=box style=filled]
+	size="6,6"
+	"短信应用" -> "ToB前台"
+	"短信应用" -> "数据库"
+	"ToB前台" -> "ToB后台"
+}

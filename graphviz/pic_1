@@ -1,0 +1,7 @@
+graph {
+	node [color=lightblue2 style=filled]
+	size="6,6"
+	""
+	B
+	A -- B
+}
